@@ -1,41 +1,39 @@
-let sort = Math.floor(Math.random() * 100) + 1;
-let tentativas = 5;
+let sort = Math.floor(Math.random() * 100) + 1; 
+console.log(sort);
 
-document.getElementById("chances").innerHTML = "Tentativas restantes: " + tentativas;
+let tentativas = 5; 
+document.getElementById("chances").innerHTML = "Tentativas: " + tentativas;
+let saida = document.getElementById("output");
 
 function clique() {
-    let valor = parseInt(document.getElementById("input").value);
-    let saida = document.getElementById("output");
+    let valor = document.getElementById("input").value;
+    
 
     if (valor > 0 && valor <= 100) {
-        if (valor === sort) {
-            saida.innerHTML = "Acertou!";
-            document.getElementById("btn").disabled = true;
-        } else if (valor < sort) {
-            saida.innerHTML = "O número que voce procura é menor";
+
+            if (valor === sort) {
+                saida.innerHTML = "Acertou!";
+            } else if (valor < sort) {
+                saida.innerHTML = "O valor é maior.";
+            } else if (valor > sort) {
+                saida.innerHTML = "O valor é menor.";
+            }
         } else {
-            saida.innerHTML = "O número que voce procura é maior";
+            saida.innerHTML = "Você está fora do intervalo";
         }
 
         tentativas--;
-        document.getElementById("chances").innerHTML = "Tentativas restantes: " + tentativas;
-
-        if (tentativas === 0 && valor !== sort) {
+        document.getElementById("chances").innerHTML = "tentativas: " + tentativas;
+        if (tentativas == 0){
             document.getElementById("btn").disabled = true;
-            saida.innerHTML = "Acabaram as tentativas. O número sorteado era: " + sort;
+            saida.innerHTML = "Acabaram as tentativas, o numero sorteado era: " + sort;
         }
-    } else {
-        saida.innerHTML = "O valor está fora do intervalo (1 a 100).";
     }
-}
-
-function novo() {
-    sort = Math.floor(Math.random() * 100) + 1;
+function novo(){
+    sort = Math.floor(Math.random() * 100) + 1; 
     tentativas = 5;
-    document.getElementById("chances").innerHTML = "Tentativas restantes: " + tentativas;
     document.getElementById("btn").disabled = false;
-
-    let saida = document.getElementById("output");
-    saida.innerHTML = "";
-    document.getElementById("input").value = "";
+     document.getElementById("chances").innerHTML = "tentativas: " + tentativas;
+     saida.innerHTML = "&nbsp"
+      console.log(sort);
 }
