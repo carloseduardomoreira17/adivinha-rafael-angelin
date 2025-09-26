@@ -1,0 +1,86 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom right, #6a11cb, #2575fc);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+/* Título */
+h1 {
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* Campo de número */
+input[type="number"] {
+    padding: 12px;
+    font-size: 1.1rem;
+    width: 220px;
+    border: none;
+    border-radius: 8px;
+    margin: 10px;
+    outline: none;
+    transition: 0.3s;
+    background-color: #ffffff;
+    color: #333;
+}
+
+input[type="number"]:focus {
+    box-shadow: 0 0 0 2px #ffffffaa;
+}
+
+/* Botões */
+button {
+    padding: 12px 24px;
+    font-size: 1rem;
+    margin: 10px 5px;
+    border: none;
+    border-radius: 8px;
+    background-color: #ffffff;
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.05);
+}
+
+button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+/* Texto de tentativas */
+#chances {
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+/* Resultado */
+#output {
+    margin-top: 20px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 15px 20px;
+    border-radius: 10px;
+    min-width: 250px;
+    color: #fff;
+}
