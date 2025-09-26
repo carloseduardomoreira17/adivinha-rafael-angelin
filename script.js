@@ -12,9 +12,9 @@ function clique() {
             saida.innerHTML = "Acertou!";
             document.getElementById("btn").disabled = true;
         } else if (valor < sort) {
-            saida.innerHTML = "O número digitado é maior";
+            saida.innerHTML = "O número que voce procura é menor";
         } else {
-            saida.innerHTML = "O número digitado é menor";
+            saida.innerHTML = "O número que voce procura é maior";
         }
 
         tentativas--;
